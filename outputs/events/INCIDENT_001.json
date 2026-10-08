@@ -1,0 +1,13 @@
+{
+    "incident_id": "INCIDENT_001",
+    "incident_type": "Fighting",
+    "start_time": 0.0,
+    "end_time": 156.66666666666666,
+    "duration": 156.66666666666666,
+    "peak_confidence": 81.9642961025238,
+    "evidence": {
+        "representative_frame": "outputs/evidence/INCIDENT_001_frame.jpg",
+        "video_segment": "outputs/evidence/INCIDENT_001_segment.mp4"
+    },
+    "ai_report": null
+}

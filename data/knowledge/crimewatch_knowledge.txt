@@ -1,0 +1,106 @@
+CrimeWatch AI Incident Intelligence Knowledge Base
+
+FIGHTING
+
+Definition:
+A physical confrontation or violent altercation involving one or more people.
+
+Potential indicators:
+- Physical striking
+- Pushing or grappling
+- Aggressive physical interaction
+- Multiple people engaged in a confrontation
+
+Incident handling:
+- Record the exact timestamp of the detected event.
+- Preserve the original video evidence.
+- Review the surrounding footage before and after the detected event.
+- If the situation presents an immediate safety risk, escalate according to the applicable security protocol.
+- Do not modify the original evidence.
+
+Evidence considerations:
+- Preserve the original recording.
+- Record the camera/source identifier when available.
+- Record the event start and end time.
+- Maintain a clear distinction between model prediction and confirmed human assessment.
+
+
+SHOOTING
+
+Definition:
+An event involving the apparent discharge or use of a firearm.
+
+Potential indicators:
+- Weapon-like object
+- Sudden muzzle-flash-like visual pattern
+- Person handling or pointing a firearm
+- Sudden crowd reaction or movement
+
+Incident handling:
+- Treat a detected shooting event as potentially high risk.
+- Preserve the original video.
+- Record the precise timestamp.
+- Review surrounding footage.
+- Escalate according to applicable emergency and security procedures.
+
+Evidence considerations:
+- Preserve original footage.
+- Record camera/source information.
+- Record timestamps.
+- Model predictions should be treated as alerts requiring verification, not as definitive legal conclusions.
+
+
+EXPLOSION
+
+Definition:
+A sudden explosive event characterized by a rapid visual change, blast-like event, or large burst.
+
+Potential indicators:
+- Sudden bright flash
+- Rapid expansion of smoke or debris
+- Sudden structural or environmental change
+- Crowd reaction following a sudden event
+
+Incident handling:
+- Treat a detected explosion as a potentially hazardous event.
+- Preserve the original footage.
+- Record the timestamp.
+- Review footage surrounding the event.
+- Escalate according to applicable emergency and safety procedures.
+
+
+NORMAL
+
+Definition:
+Video activity that does not correspond to the suspicious activity categories currently supported by the detection model.
+
+Interpretation:
+A Normal prediction does not prove that no crime occurred.
+It only means that the current model did not classify the analyzed temporal window as one of its supported suspicious categories.
+
+
+GENERAL VIDEO EVIDENCE
+
+For every detected incident:
+- Preserve the original video.
+- Record the source or camera identifier when available.
+- Record the event timestamp.
+- Record the model's predicted class.
+- Record the model confidence.
+- Separate automated detection from verified human assessment.
+- Avoid presenting model predictions as legally established facts.
+
+
+MODEL LIMITATIONS
+
+The current CrimeWatch development model supports:
+- Normal
+- Fighting
+- Shooting
+- Explosion
+
+The model's confidence score is not the same as model accuracy.
+
+Accuracy should be evaluated using labeled test data.
+
+Predictions from arbitrary live or uploaded footage should be treated as automated alerts that may require human verification.
