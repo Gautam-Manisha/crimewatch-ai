@@ -231,8 +231,8 @@ class CrimeVideoAnalyzer:
         return events
 
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
     analyzer = CrimeVideoAnalyzer()
 
     video_path = input("Enter video path: ").strip()
@@ -240,82 +240,4 @@ if __name__ == "__main__":
     events = analyzer.analyze(video_path)
 
     suspicious_events = aggregate_events(events)
-
     print_events(suspicious_events)
-
-    print("\n" + "=" * 70)
-    print("EXTRACTING INCIDENT EVIDENCE")
-    print("=" * 70)
-
-    for index, event in enumerate(
-        suspicious_events,
-        start=1
-    ):
-
-        incident_id = f"INCIDENT_{index:03d}"
-
-        print("\n" + "-" * 70)
-        print(incident_id)
-        print("-" * 70)
-
-        print(
-            f"Type: {event['label']}"
-        )
-
-        print(
-            f"Time: "
-            f"{event['start_time']:.2f}s → "
-            f"{event['end_time']:.2f}s"
-        )
-
-        print(
-            f"Confidence: "
-            f"{event['peak_confidence']:.2f}%"
-        )
-
-        try:
-
-            midpoint = (
-                event["start_time"]
-                + event["end_time"]
-            ) / 2
-
-            frame_path = extract_evidence_frame(
-                video_path,
-                midpoint,
-                incident_id
-            )
-
-            segment_path = extract_video_segment(
-                video_path,
-                event["start_time"],
-                event["end_time"],
-                incident_id
-            )
-
-            incident_record = save_incident_record(
-                incident_id,
-                event,
-                frame_path,
-                segment_path,
-                None
-            )
-
-            print(
-                f"Evidence frame: {frame_path}"
-            )
-
-            print(
-                f"Video segment: {segment_path}"
-            )
-
-            print(
-                f"Incident record: {incident_record}"
-            )
-
-        except Exception as error:
-
-            print(
-                f"Could not extract evidence: {error}"
-            )
-        print(e)

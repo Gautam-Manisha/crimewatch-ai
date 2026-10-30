@@ -1,0 +1,13 @@
+{
+    "incident_id": "INCIDENT_007",
+    "incident_type": "Explosion",
+    "start_time": 21.0,
+    "end_time": 23.666666666666668,
+    "duration": 2.666666666666668,
+    "peak_confidence": 79.52001094818115,
+    "evidence": {
+        "representative_frame": "outputs/evidence/INCIDENT_007_frame.jpg",
+        "video_segment": "outputs/evidence/INCIDENT_007_segment.mp4"
+    },
+    "ai_report": null
+}

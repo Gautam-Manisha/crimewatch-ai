@@ -1,0 +1,13 @@
+{
+    "incident_id": "INCIDENT_010",
+    "incident_type": "Shooting",
+    "start_time": 30.333333333333332,
+    "end_time": 31.666666666666668,
+    "duration": 1.3333333333333357,
+    "peak_confidence": 70.42865753173828,
+    "evidence": {
+        "representative_frame": "outputs/evidence/INCIDENT_010_frame.jpg",
+        "video_segment": "outputs/evidence/INCIDENT_010_segment.mp4"
+    },
+    "ai_report": null
+}
